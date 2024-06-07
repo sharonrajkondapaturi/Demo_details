@@ -23,7 +23,7 @@ const initializeDbServer = async()=>{
             filename:dbPath,
             driver:sqlite3.Database,
         });
-        app.listen(3005,() => {
+        app.listen(4000,() => {
             console.log(`Server is listening`);
           });
     }
