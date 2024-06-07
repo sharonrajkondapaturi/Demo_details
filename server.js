@@ -9,8 +9,6 @@ app.use(cors())
 let db = null;
 let sql 
 
-const app1 = require('http').createServer((req, res) => res.end('Ahoy!'));
-const PORT = process.env.PORT || 3005;
 
 
 
@@ -25,8 +23,8 @@ const initializeDbServer = async()=>{
             filename:dbPath,
             driver:sqlite3.Database,
         });
-        app1.listen(PORT, () => {
-            console.log(`Server is listening on port ${PORT}`);
+        app.listen(3005,() => {
+            console.log(`Server is listening`);
           });
     }
     catch(e){
